@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#171523">
+<title>NOVELIA — Your Story, Your World</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap');
+:root{--bg:#101019;--panel:#191925;--panel2:#222232;--text:#f5f1fa;--muted:#aaa5b8;--accent:#c39be9;--accent2:#edb7d5;--line:#343244;--good:#9bd6b3}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif}button,input,textarea,select{font:inherit}button{cursor:pointer;border:0}.app{max-width:1180px;margin:auto;padding:0 20px 80px}.top{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:sticky;top:0;background:#101019ed;backdrop-filter:blur(12px);z-index:5}.brand{font:800 27px 'Playfair Display';letter-spacing:1px;color:#f3dcff}.brand span{color:var(--accent2)}.nav{display:flex;gap:8px;align-items:center}.nav button,.ghost{background:transparent;color:var(--muted);padding:10px 13px;border-radius:10px}.nav button.active,.nav button:hover,.ghost:hover{background:var(--panel2);color:white}.primary{background:linear-gradient(120deg,#b88be2,#e3a9cb);color:#21152c;font-weight:700;padding:11px 16px;border-radius:11px}.hero{margin:28px 0 34px;padding:34px;border:1px solid #514061;border-radius:22px;background:radial-gradient(circle at 80% 20%,#49345f 0,transparent 35%),linear-gradient(120deg,#201a2d,#171523);display:grid;grid-template-columns:1.4fr .8fr;gap:20px;align-items:center;overflow:hidden}.eyebrow{color:var(--accent2);font-size:12px;letter-spacing:2px;font-weight:700}.hero h1{font:800 clamp(32px,5vw,54px)/1.08 'Playfair Display';margin:12px 0}.hero p{color:#c5bdce;max-width:550px;line-height:1.7}.hero-art{font-size:100px;text-align:center;filter:drop-shadow(0 15px 25px #0008)}.search{width:100%;background:var(--panel);border:1px solid var(--line);color:white;padding:13px 15px;border-radius:12px;outline:none}.search:focus,input:focus,textarea:focus{border-color:var(--accent)!important}.section-head{display:flex;justify-content:space-between;align-items:end;margin:28px 0 15px}.section-head h2{font:700 25px 'Playfair Display';margin:0}.muted{color:var(--muted);font-size:13px}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}.book{min-width:0;cursor:pointer}.cover{width:100%;aspect-ratio:2/3;border-radius:12px;background:linear-gradient(145deg,#463454,#1c2439);overflow:hidden;display:flex;align-items:center;justify-content:center;position:relative;border:1px solid #ffffff18}.cover img{width:100%;height:100%;object-fit:cover}.cover .placeholder{padding:16px;text-align:center;font:700 21px 'Playfair Display';text-shadow:0 2px 10px #000}.book h3{font-size:15px;margin:10px 0 4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.book small{color:var(--muted)}.tag{display:inline-block;border:1px solid var(--line);color:#cfc5dc;border-radius:20px;padding:4px 9px;font-size:11px;margin:4px 4px 0 0}.empty{padding:35px 15px;text-align:center;color:var(--muted);background:var(--panel);border:1px dashed var(--line);border-radius:15px}.view{display:none}.view.show{display:block}.detail{display:grid;grid-template-columns:220px 1fr;gap:25px;margin-top:30px}.detail .cover{max-width:220px}.detail h1{font:700 34px 'Playfair Display';margin:5px 0 10px}.detail p{color:#c7c0d0;line-height:1.75}.chapter-list{margin-top:25px;background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}.chapter-row{padding:15px 17px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;cursor:pointer}.chapter-row:last-child{border:0}.chapter-row:hover{background:var(--panel2)}.reader{max-width:760px;margin:30px auto}.reader-head{display:flex;justify-content:space-between;align-items:center;gap:10px}.reader-body{font:19px/1.95 Georgia,serif;color:#e9e2ed;white-space:pre-wrap;margin:30px 0}.reader-body p{margin:0 0 1.3em}.toolbar{display:flex;gap:8px;flex-wrap:wrap}.toolbar button,.secondary{background:var(--panel2);color:white;border:1px solid var(--line);padding:9px 12px;border-radius:9px}.form-card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px;margin:25px 0}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:flex;flex-direction:column;gap:7px;margin-bottom:14px}.field label{font-size:13px;color:#c9c2d2}.field input,.field textarea,.field select{width:100%;padding:12px;background:#11111b;border:1px solid var(--line);border-radius:10px;color:white;outline:none}.field textarea{min-height:130px;resize:vertical}.field.full{grid-column:1/-1}.cover-preview{width:100px;aspect-ratio:2/3;object-fit:cover;border-radius:9px;background:#292437}.notice{padding:13px 15px;border-radius:10px;background:#252139;color:#d7c8ec;font-size:13px;line-height:1.6;margin:15px 0}.footer{border-top:1px solid var(--line);padding:25px 0;margin-top:50px;color:var(--muted);font-size:12px;text-align:center}.hide{display:none!important}
+@media(max-width:760px){.app{padding:0 14px 60px}.top{height:65px}.nav{gap:1px}.nav button{font-size:12px;padding:9px 8px}.brand{font-size:22px}.hero{grid-template-columns:1fr;padding:25px}.hero-art{display:none}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.detail{grid-template-columns:115px 1fr;gap:15px}.detail h1{font-size:24px}.detail .cover{width:115px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.reader-body{font-size:18px}.section-head h2{font-size:22px}}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="top">
+  <div class="brand">NOVE<span>LIA</span></div>
+  <nav class="nav">
+    <button class="active" data-view="home">Beranda</button>
+    <button data-view="library">Katalog</button>
+    <button data-view="studio">Studio ✎</button>
+  </nav>
+</header>
+
+<main>
+<section id="home" class="view show">
+  <div class="hero">
+    <div><div class="eyebrow">YOUR STORY. YOUR WORLD.</div><h1>Setiap cerita punya dunianya sendiri.</h1><p>Temukan bacaan baru, jelajahi dunia yang belum pernah kamu kenal, atau mulai tulis kisahmu sendiri di NOVELIA.</p><button class="primary" onclick="go('library')">Jelajahi Novel →</button></div>
+    <div class="hero-art">📖 ✦</div>
+  </div>
+  <div class="section-head"><div><h2>Novel pilihan</h2><div class="muted">Cerita yang bisa kamu mulai hari ini</div></div><button class="ghost" onclick="go('library')">Lihat semua →</button></div>
+  <div id="featured" class="grid"></div>
+  <div class="notice">NOVELIA versi awal menyimpan karya di browser perangkat ini. Untuk menerbitkan novel agar tersimpan dan bisa dibaca semua orang dari perangkat berbeda, kita perlu menghubungkan database dan penyimpanan gambar online.</div>
+</section>
+
+<section id="library" class="view">
+  <div class="section-head"><div><h2>Katalog Novel</h2><div class="muted">Cari cerita berdasarkan judul, penulis, atau genre.</div></div></div>
+  <input id="search" class="search" placeholder="Cari novel atau genre..." oninput="renderBooks()">
+  <div style="margin:15px 0"><select id="genreFilter" class="search" onchange="renderBooks()"><option value="">Semua genre</option><option>Fantasy</option><option>Romance</option><option>Action</option><option>Mystery</option><option>Horror</option><option>Slice of Life</option><option>Science Fiction</option><option>Drama</option></select></div>
+  <div id="catalog" class="grid"></div>
+</section>
+
+<section id="detail" class="view"><div id="detailContent"></div></section>
+<section id="reader" class="view"><div id="readerContent"></div></section>
+
+<section id="studio" class="view">
+  <div class="section-head"><div><h2>Writer Studio</h2><div class="muted">Bangun cerita dan terbitkan karya versimu.</div></div></div>
+  <div class="notice">Karya yang dibuat di sini tersimpan di browser ini (localStorage), bukan otomatis ke akun atau server publik. Jangan gunakan mode privat/incognito untuk menyimpan karya.</div>
+  <div class="form-card">
+    <h3 style="margin-top:0">Buat novel baru</h3>
+    <form id="novelForm">
+      <div class="form-grid">
+        <div class="field"><label>Judul novel *</label><input id="title" required maxlength="90" placeholder="Contoh: The Last Starlight"></div>
+        <div class="field"><label>Nama penulis</label><input id="author" maxlength="50" placeholder="Nama pena"></div>
+        <div class="field"><label>Genre</label><select id="genre"><option>Fantasy</option><option>Romance</option><option>Action</option><option>Mystery</option><option>Horror</option><option>Slice of Life</option><option>Science Fiction</option><option>Drama</option></select></div>
+        <div class="field"><label>Status</label><select id="status"><option>Ongoing</option><option>Completed</option><option>Hiatus</option></select></div>
+        <div class="field full"><label>Sinopsis</label><textarea id="synopsis" maxlength="1000" placeholder="Ceritakan sedikit tentang novelmu..."></textarea></div>
+        <div class="field full"><label>Gambar sampul (JPG/PNG/WebP)</label><input id="cover" type="file" accept="image/png,image/jpeg,image/webp"><div style="display:flex;gap:12px;align-items:center"><img id="coverPreview" class="cover-preview hide" alt="Preview sampul"><small class="muted">Rasio sampul yang disarankan 2:3. Gunakan gambar milikmu atau yang boleh digunakan.</small></div></div>
+      </div>
+      <button class="primary" type="submit">Simpan novel</button>
+    </form>
+  </div>
+  <div class="section-head"><div><h2>Karyaku</h2><div class="muted">Kelola novel yang kamu buat di perangkat ini.</div></div></div>
+  <div id="myBooks" class="grid"></div>
+</section>
+</main>
+<footer class="footer">NOVELIA · Your Story, Your World · Made for readers and writers.</footer>
+</div>
+
+<script>
+const KEY='novelia_books_v1';
+const samples=[
+{id:'sample-1',title:'The Hollow Crown',author:'NOVELIA Original',genre:'Fantasy',status:'Ongoing',synopsis:'Di sebuah kerajaan yang kehilangan mataharinya, seorang pengelana menemukan mahkota yang seharusnya telah lama terkubur. Sejak hari itu, takdir kerajaan mulai bergerak kembali.',cover:'',sample:true,chapters:[{title:'Prolog — Hari Tanpa Matahari',content:'Pada hari ketika matahari berhenti terbit, seluruh lonceng di Kerajaan Aster berbunyi bersamaan.\\n\\nOrang-orang menyebutnya pertanda akhir zaman. Para pendeta menyebutnya ujian. Namun jauh di utara, seorang pengelana hanya menganggapnya sebagai awal dari perjalanan panjang.\\n\\nDi tangannya terbaring sebuah mahkota hitam, dingin seperti malam yang tak berujung.'}]},
+{id:'sample-2',title:'Letters After Rain',author:'NOVELIA Original',genre:'Romance',status:'Completed',synopsis:'Surat-surat lama, stasiun kecil, dan dua orang yang selalu datang terlambat untuk saling memahami.',cover:'',sample:true,chapters:[{title:'Bab 1 — Stasiun Pukul Lima',content:'Hujan turun pelan ketika kereta terakhir meninggalkan stasiun. Di bangku kayu dekat peron, sebuah surat tertinggal.\\n\\nNamanya tertulis di bagian depan. Tulisan tangan yang sangat ia kenal.'}]},
+{id:'sample-3',title:'The Quiet Witness',author:'NOVELIA Original',genre:'Mystery',status:'Ongoing',synopsis:'Sebuah kota kecil menyimpan rahasia yang tidak pernah tercatat dalam laporan kepolisian. Satu-satunya saksi memilih untuk diam.',cover:'',sample:true,chapters:[{title:'Bab 1 — Kota yang Mengingat',content:'Di kota itu, tidak ada yang benar-benar hilang. Setiap nama tinggal di dinding, setiap rahasia bersembunyi di balik pintu.\\n\\nDan malam ini, seseorang mengetuk rumah yang sudah kosong selama dua puluh tahun.'}]},
+{id:'sample-4',title:'Beyond the Blue Hour',author:'NOVELIA Original',genre:'Science Fiction',status:'Ongoing',synopsis:'Ketika ingatan bisa disimpan sebagai data, seorang teknisi menemukan satu memori yang tidak pernah dimiliki siapa pun.',cover:'',sample:true,chapters:[{title:'Bab 1 — File Tanpa Pemilik',content:'Pukul 03.17, sistem arsip kota mengirimkan satu notifikasi. Sebuah file memori ditemukan tanpa identitas pemilik.\\n\\nIsinya hanya satu kalimat: Jangan biarkan fajar tiba.'}]}
+];
+let books=loadBooks(), currentBook=null, currentChapter=0, fontSize=19, pendingCover='';
+function loadBooks(){try{return JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){return []}}
+function saveBooks(){try{localStorage.setItem(KEY,JSON.stringify(books));return true}catch(e){alert('Penyimpanan browser penuh. Coba gunakan gambar sampul yang lebih kecil.');return false}}
+function allBooks(){return [...samples,...books]}
+function esc(s=''){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function coverMarkup(b){return b.cover?`<img src="${b.cover}" alt="Sampul ${esc(b.title)}">`:`<div class="placeholder">${esc(b.title)}</div>`}
+function card(b){return `<article class="book" onclick="openBook('${b.id}')"><div class="cover">${coverMarkup(b)}</div><h3>${esc(b.title)}</h3><small>${esc(b.author||'Penulis anonim')} · ${esc(b.genre)}</small></article>`}
+function renderBooks(){
+ const q=(document.getElementById('search')?.value||'').toLowerCase(),g=document.getElementById('genreFilter')?.value||'';
+ const filtered=allBooks().filter(b=>(!q||[b.title,b.author,b.genre].join(' ').toLowerCase().includes(q))&&(!g||b.genre===g));
+ document.getElementById('catalog').innerHTML=filtered.length?filtered.map(card).join(''):'<div class="empty" style="grid-column:1/-1">Belum ada novel yang cocok dengan pencarianmu.</div>';
+}
+function renderHome(){document.getElementById('featured').innerHTML=allBooks().slice(0,4).map(card).join('')}
+function renderMine(){
+ const mine=document.getElementById('myBooks');
+ mine.innerHTML=books.length?books.map(b=>`<article class="book"><div class="cover" onclick="openBook('${b.id}')">${coverMarkup(b)}</div><h3 onclick="openBook('${b.id}')">${esc(b.title)}</h3><small>${esc(b.genre)} · ${b.chapters.length} bab</small><div style="display:flex;gap:6px;margin-top:9px"><button class="secondary" onclick="editBook('${b.id}')">Edit</button><button class="secondary" onclick="deleteBook('${b.id}')">Hapus</button></div></article>`).join(''):'<div class="empty" style="grid-column:1/-1">Belum ada karya. Mulai novel pertamamu di atas.</div>';
+}
+function go(id){document.querySelectorAll('.view').forEach(v=>v.classList.remove('show'));document.getElementById(id).classList.add('show');document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.view===id));window.scrollTo(0,0);if(id==='home')renderHome();if(id==='library')renderBooks();if(id==='studio')renderMine()}
+document.querySelectorAll('.nav button').forEach(b=>b.addEventListener('click',()=>go(b.dataset.view)));
+function openBook(id){
+ const b=allBooks().find(x=>x.id===id);if(!b)return;currentBook=b;
+ document.getElementById('detailContent').innerHTML=`<button class="ghost" onclick="go('library')">← Kembali ke katalog</button><div class="detail"><div class="cover">${coverMarkup(b)}</div><div><span class="tag">${esc(b.genre)}</span><span class="tag">${esc(b.status)}</span><h1>${esc(b.title)}</h1><div class="muted">Ditulis oleh ${esc(b.author||'Penulis anonim')}</div><p>${esc(b.synopsis||'Belum ada sinopsis.')}</p><div class="toolbar"><button class="primary" onclick="readChapter('${b.id}',0)">Mulai membaca</button></div></div></div><div class="section-head"><div><h2>Daftar Bab</h2><div class="muted">${b.chapters.length} bab tersedia</div></div>${b.sample?'':'<button class="primary" onclick="addChapter()">+ Tambah Bab</button>'}</div><div class="chapter-list">${b.chapters.map((c,i)=>`<div class="chapter-row" onclick="readChapter('${b.id}',${i})"><span>${esc(c.title)}</span><span class="muted">Baca →</span></div>`).join('')||'<div class="empty">Belum ada bab.</div>'}</div>`;
+ go('detail');
+}
+function readChapter(id,index){
+ const b=allBooks().find(x=>x.id===id);if(!b||!b.chapters[index])return;currentBook=b;currentChapter=index;
+ const c=b.chapters[index];
+ document.getElementById('readerContent').innerHTML=`<div class="reader"><div class="reader-head"><button class="ghost" onclick="openBook('${b.id}')">← Detail novel</button><div class="toolbar"><button onclick="changeFont(-1)">A−</button><button onclick="changeFont(1)">A+</button></div></div><div class="muted" style="text-align:center;margin-top:35px">${esc(b.title)}</div><h1 style="font:700 30px 'Playfair Display';text-align:center">${esc(c.title)}</h1><div class="reader-body" id="readerText" style="font-size:${fontSize}px">${esc(c.content).split('\\n\\n').map(p=>'<p>'+p+'</p>').join('')}</div><div class="toolbar" style="justify-content:space-between"><button class="secondary" ${index===0?'disabled':''} onclick="readChapter('${b.id}',${index-1})">← Bab sebelumnya</button><button class="primary" ${index===b.chapters.length-1?'disabled':''} onclick="readChapter('${b.id}',${index+1})">Bab berikutnya →</button></div></div>`;
+ go('reader');
+}
+function changeFont(n){fontSize=Math.min(28,Math.max(15,fontSize+n));const el=document.getElementById('readerText');if(el)el.style.fontSize=fontSize+'px'}
+function deleteBook(id){if(!confirm('Hapus novel ini dari perangkat?'))return;books=books.filter(b=>b.id!==id);saveBooks();renderMine()}
+function editBook(id){
+ const b=books.find(x=>x.id===id);if(!b)return;
+ document.getElementById('title').value=b.title;document.getElementById('author').value=b.author;document.getElementById('genre').value=b.genre;document.getElementById('status').value=b.status;document.getElementById('synopsis').value=b.synopsis;pendingCover=b.cover||'';document.getElementById('novelForm').dataset.edit=id;
+ document.getElementById('title').scrollIntoView({behavior:'smooth',block:'center'});
+}
+document.getElementById('cover').addEventListener('change',e=>{
+ const f=e.target.files[0];if(!f)return;if(f.size>1.5*1024*1024){alert('Pilih gambar di bawah 1.5 MB agar penyimpanan browser tidak cepat penuh.');e.target.value='';return}
+ const r=new FileReader();r.onload=()=>{pendingCover=r.result;const p=document.getElementById('coverPreview');p.src=pendingCover;p.classList.remove('hide')};r.readAsDataURL(f);
+});
+document.getElementById('novelForm').addEventListener('submit',e=>{
+ e.preventDefault();const id=e.target.dataset.edit;
+ const old=books.find(b=>b.id===id);
+ const item={id:id||'novel-'+Date.now(),title:document.getElementById('title').value.trim(),author:document.getElementById('author').value.trim()||'Penulis anonim',genre:document.getElementById('genre').value,status:document.getElementById('status').value,synopsis:document.getElementById('synopsis').value.trim(),cover:pendingCover||(old?.cover||''),chapters:old?.chapters||[]};
+ if(old)books=books.map(b=>b.id===id?item:b);else books.unshift(item);
+ if(saveBooks()){e.target.reset();delete e.target.dataset.edit;pendingCover='';document.getElementById('coverPreview').classList.add('hide');renderMine();alert(old?'Novel berhasil diperbarui.':'Novel berhasil disimpan. Sekarang tambahkan bab pertamamu.');}
+});
+function addChapter(){
+ const b=books.find(x=>x.id===currentBook?.id);if(!b)return;
+ const title=prompt('Judul bab:','Bab '+(b.chapters.length+1));if(!title)return;
+ const content=prompt('Isi bab (teks biasa):');if(!content)return;
+ b.chapters.push({title,content});saveBooks();openBook(b.id);
+}
+renderHome();renderBooks();
+</script>
+</body>
+</html>
